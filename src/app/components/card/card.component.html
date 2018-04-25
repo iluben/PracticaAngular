@@ -1,0 +1,20 @@
+<!-- <ul>
+  <li *ngFor='let curso of cursos'>
+    {{curso.name}}
+  </li>
+</ul> -->
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{inputData.name}}</h5>
+    <p class="card-text">{{inputData.descripcion}}</p>
+
+    <ul class="list-group">
+        <li class="list-group-item">{{inputData.horas}}</li>
+        <li class="list-group-item">{{inputData.plazas_disponibles}}</li>
+        <li class="list-group-item">{{inputData.max_alumnos}}</li>
+        <li class="list-group-item">{{inputData.precio}}</li>
+      </ul>
+
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
