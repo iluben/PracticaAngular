@@ -12,9 +12,15 @@ import { CursosComponent } from '../../paginas/cursos/cursos.component';
 export class CardComponent implements OnInit {
 
   @Input() inputData: ICurso;
-  // @Output() outData = new EventEmitter();
+  @Output() _onDelete = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  deleteOnClick(id) {
+    console.log('id', id);
+    console.log('id', this.inputData.id);
+    this._onDelete.emit(id);
   }
 }

@@ -32,4 +32,10 @@ export class ApiService {
     return this.http.post<any>(CONFIG.ApiUrl.toString()
     + END_POINT.Cursos.toString(), form);
   }
+
+  DeleteCursos(id): Observable<any> {
+    return this.http.delete<any>(CONFIG.ApiUrl.toString()
+    + END_POINT.Cursos.toString()
+    + END_POINT.Slash, id);
+  }
 }
