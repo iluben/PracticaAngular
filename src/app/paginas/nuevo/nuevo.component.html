@@ -1,28 +1,28 @@
-<form>
+<form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
   <div class="form-group col-md-3">
     <label for="nombreCurso">Nombre</label>
-    <input name = "name" type="text" class="form-control" id="nombreCurso">
+    <input name = "name" ngModel type="text" class="form-control" id="nombreCurso">
     <small id="nombreHelp" class="form-text text-muted">Lorem ipsum blebleballabal</small>
   </div>
   <div class="form-group col-md-3">
     <label for="descripcionCurso">Descripción</label>
-    <input name="descripcion" type="text" class="form-control" id="descripcionCurso">
+    <input name="descripcion" ngModel type="text" class="form-control" id="descripcionCurso">
   </div>
   <div class="form-group col-md-3">
       <label for="horasCurso">Horas</label>
-      <input name="horas" type="number" class="form-control" id="horasCurso">
+      <input name="horas" ngModel type="number" class="form-control" id="horasCurso">
   </div>
   <div class="form-group col-md-3">
       <label for="plazasCurso">Plazas</label>
-      <input name="plazas_disponibles" type="number" class="form-control" id="plazasCurso">
+      <input name="plazas_disponibles" ngModel type="number" class="form-control" id="plazasCurso">
   </div>
   <div class="form-group col-md-3">
       <label for="precioCurso">Precio</label>
-      <input name="precio" type="number" class="form-control" id="precioCurso">
+      <input name="precio" ngModel type="number" class="form-control" id="precioCurso">
   </div>
   <div class="form-group col-md-3">
       <label for="alumCurso">Alumnos</label>
-      <input name="max_alumnos" type="number" class="form-control" id="alumCurso">
+      <input name="max_alumnos" ngModel type="number" class="form-control" id="alumCurso">
   </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
+  <input type="submit" class="btn btn-primary" />
 </form>

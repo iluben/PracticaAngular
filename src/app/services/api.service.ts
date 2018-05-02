@@ -27,4 +27,9 @@ export class ApiService {
       CONFIG.ApiUrl.toString()
       + END_POINT.Cursos.toString());
   }
+
+  PostCursos(form): Observable<ICurso> {
+    return this.http.post<any>(CONFIG.ApiUrl.toString()
+    + END_POINT.Cursos.toString(), form);
+  }
 }
