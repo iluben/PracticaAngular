@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Constant } from './../app.constant';
+import { CONFIG, END_POINT } from './../app.constant';
 import { Observable } from 'rxjs/Observable';
 
 export interface ICurso {
@@ -23,6 +23,8 @@ export class ApiService {
   // }
 
   GetCursos(): Observable<ICurso[]> {
-    return this.http.get<ICurso[]>(Constant.API_ENDPOINT);
+    return this.http.get<ICurso[]>(
+      CONFIG.ApiUrl.toString()
+      + END_POINT.Cursos.toString());
   }
 }

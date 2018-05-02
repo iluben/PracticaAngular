@@ -15,7 +15,10 @@ export class CursosComponent implements OnInit {
     this.GetCursos();
   }
 
+  // GetCursos(): void {
+  //   this.Api.GetCursos().subscribe(cursos => this.cursos = cursos);
+  // }
   GetCursos(): void {
-    this.Api.GetCursos().subscribe(cursos => this.cursos = cursos);
+    this.Api.GetCursos().subscribe(data => this.cursos = data);
   }
 }
