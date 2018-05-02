@@ -36,6 +36,12 @@ export class ApiService {
   DeleteCursos(id): Observable<any> {
     return this.http.delete<any>(CONFIG.ApiUrl.toString()
     + END_POINT.Cursos.toString()
-    + END_POINT.Slash, id);
+    + END_POINT.Slash + id);
+  }
+
+  GetCurso(id): Observable<ICurso> {
+    return this.http.get<ICurso>(CONFIG.ApiUrl.toString()
+    + END_POINT.Cursos.toString()
+    + END_POINT.Slash + id);
   }
 }

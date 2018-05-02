@@ -6,10 +6,12 @@ import { HttpClient } from '@angular/common/http';
 import { ComponentsModule } from '../components/components.module';
 import { NuevoComponent } from './nuevo/nuevo.component';
 import { FormsModule } from '@angular/forms';
+import { VerComponent } from './ver/ver.component';
 
 export const ROUTES: Routes = [
   { path: '', component: CursosComponent },
-  { path: 'nuevo', component: NuevoComponent }
+  { path: 'nuevo', component: NuevoComponent },
+  { path: 'ver/:id', component: VerComponent }
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ export const ROUTES: Routes = [
   ],
   declarations: [
     CursosComponent,
-    NuevoComponent]
+    NuevoComponent,
+    VerComponent]
 })
 export class PaginasModule {}

@@ -14,8 +14,7 @@
         <li class="list-group-item">{{inputData.max_alumnos}}</li>
         <li class="list-group-item">{{inputData.precio}}</li>
       </ul>
-
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <button type="button" class="btn btn-primary" (click)="viewClick(inputData.id)">Ver</button>
     <button (click)="deleteOnClick(inputData.id)" type="button" class="btn btn-danger">Eliminar</button>
   </div>
 </div>

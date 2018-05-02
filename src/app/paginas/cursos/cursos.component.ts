@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { ApiService, ICurso } from './../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -10,7 +11,9 @@ export class CursosComponent implements OnInit {
 
   @Input() inDataToDeleteCourse;
   public cursos: ICurso[];
-  constructor(private Api: ApiService) { }
+  constructor(
+    private Api: ApiService,
+    private route: Router) { }
 
   ngOnInit() {
     this.GetCursos();
@@ -25,5 +28,10 @@ export class CursosComponent implements OnInit {
 
   borrarCurso(id): void {
     this.Api.DeleteCursos(id).subscribe(data => console.log('delete', data));
+  }
+
+  verCurso(id): void {
+    // console.log('idVerCursoscomponente', id);
+    this.route.navigate(['cursos/ver', id], {skipLocationChange: true});
   }
 }
