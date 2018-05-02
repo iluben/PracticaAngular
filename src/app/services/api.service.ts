@@ -44,4 +44,9 @@ export class ApiService {
     + END_POINT.Cursos.toString()
     + END_POINT.Slash + id);
   }
+
+  PostCurso(curso): Observable<ICurso> {
+    return this.http.put<ICurso>(CONFIG.ApiUrl.toString()
+    + END_POINT.Cursos.toString(), curso);
+  }
 }

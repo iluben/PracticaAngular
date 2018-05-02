@@ -25,8 +25,8 @@ export class VerComponent implements OnInit {
   }
 
   onSubmit(formulario) {
-    console.log(formulario.form.value);
-    this.API.PostCursos(formulario.form.value).subscribe(
+    // console.log(formulario.form.value);
+    this.API.PostCurso(formulario.form.value).subscribe(
       response => console.log(JSON.stringify(response)),
       error => console.log(JSON.stringify(error))
     );
